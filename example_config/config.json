@@ -1,0 +1,21 @@
+{
+    "protocal": "udp",
+    "server_address": "47.90.52.219",
+    "server_port": 150,
+    "download_speed": 11915636,
+    "upload_speed": 2383127,
+    "port_map_list": [
+        {
+            "dst_port": 8388,
+            "listen_port": 2000
+        },
+        {
+            "dst_port": 22,
+            "listen_port": 2001
+        },
+        {
+            "dst_port": 80,
+            "listen_port": 2002
+        }
+    ]
+}
