@@ -42,7 +42,7 @@ $ java -jar finalspeed_client.jar config.json
 ```json
 {
     "protocal": "udp",
-    "server_address": "47.90.52.219",
+    "server_address": "x.x.x.x",
     "server_port": 150,
     "download_speed": 11915636,
     "upload_speed": 2383127,
