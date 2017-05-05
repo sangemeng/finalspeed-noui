@@ -227,7 +227,7 @@ public class CapEnv {
 		boolean success=false;
 		detectInterface();
 		List<PcapNetworkInterface> allDevs = Pcaps.findAllDevs();
-		System.out.println("Network Interface List: ");
+		if(allDevs.size()>0) System.out.println("Network Interface List: ");
 		for(PcapNetworkInterface pi:allDevs){
 			String desString="";
 			if(pi.getDescription()!=null){
@@ -252,7 +252,7 @@ public class CapEnv {
 			}
 		}else {
 			tcpEnable=false;
-			System.out.println("Select Network Interface failed,can't use TCP protocal!\n");
+			System.out.println("Select Network Interface failed, can't use tcp protocal, force use udp!\n");
 		}
 		if(tcpEnable){
 			sendHandle = nif.openLive(SNAPLEN,getMode(nif), READ_TIMEOUT);
@@ -495,10 +495,8 @@ public class CapEnv {
 						try {
 							Socket socket=new Socket(testIp_tcp,por);
 							socket.close();
-						} catch (UnknownHostException e) {
-							e.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
+						} catch (Exception e) {
+//							e.printStackTrace();
 						}
 					}
 				});

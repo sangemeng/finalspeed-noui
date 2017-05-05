@@ -43,7 +43,8 @@ public class PortMapManager {
 				mapRule.serverSocket=serverSocket;
 			} catch (IOException e) {
 				mapRule.using=true;
-				e.printStackTrace();
+				System.out.printf("端口"+mapRule.getListen_port()+"已被占用！");
+				System.exit(1);
 			}
 			mapRuleTable.put(mapRule.listen_port, mapRule);
 		}
