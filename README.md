@@ -62,3 +62,7 @@ $ java -jar finalspeed_client.jar config.json
     ]
 }
 ```
+
+# 下载
+
+见Release页
